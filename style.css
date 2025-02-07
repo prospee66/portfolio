@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: ""Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -80,6 +80,15 @@ nav {
     font-weight: 600;
     color: var(--logo-color);
 }
+
+.logo {
+    width: 70px; 
+    height: 70px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+
 
 .nav-menu,
 .nav-menu-list {
@@ -315,6 +324,7 @@ i {
 }
 
 /*-----featured image----*/
+/*-----featured image----*/
 .featured-image {
     display: flex;
     justify-content: right;
@@ -340,6 +350,7 @@ i {
     object-fit: cover;
 
 }
+
 
 @keyframes imgFloat {
     50% {
@@ -417,19 +428,14 @@ i {
     max-width: 90px;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
-
-
-
 .about-me h2 {
     color: var(--text-color);
 }
-
 
 .about-me p {
     margin-top: 10px;
     color: var(--text-color);
 }
-
 
 .about-info .about-me-btn {
     text-decoration: none;
@@ -446,8 +452,6 @@ i {
 }
 
 /*------skill box-----*/
-
-
 .skill {
     position: relative;
     max-width: 600px;
@@ -458,20 +462,17 @@ i {
     border-radius: 20px;
 }
 
-
 .skill .skill-box {
     width: 100%;
     margin: 25px;
 }
-
 
 .skill-box .title {
     display: block;
     font-size: 14px;
     font-weight: 600;
     color: var(--text-color);
-} 
-
+}
 
 .skill-box .skill-bar {
     height: 8px;
@@ -483,7 +484,6 @@ i {
     margin-right: auto; 
 }
 
-
 .skill-box .skill-per {
     position: relative;
     display: block;
@@ -494,7 +494,6 @@ i {
     animation: progress 0.4s ease-in-out forwards;
     opacity: 0;
 }
-
 
 .skill-per.html{
     animation-name: 0.1s;
@@ -517,7 +516,6 @@ i {
     width: 30%;
 }
 
-
 @keyframes progress {
     0% {
         width: 0;
@@ -527,7 +525,6 @@ i {
         opacity: 1;
     }
 }
-
 
 .skill-per .tooltip {
     position: absolute;
@@ -541,7 +538,6 @@ i {
     z-index: 1;
 }
 
-
 /*-----project box-----*/
 .project-container {
     display: flex;
@@ -550,7 +546,6 @@ i {
     gap: 20px;
     flex-wrap: wrap;
 }
-
 
 .project-box {
     position: relative;
@@ -577,7 +572,6 @@ i {
     font-size: 15px;
     color: var(--text-color);
 }
-
 
 .project-box::after,
 .contact-info::after {
@@ -642,7 +636,6 @@ i {
     color: #8749f2;
 }
 
-
 .contact-info:hover.contact-info h2,
 .contact-info:hover.contact-info p,
 contact-info:hover.contact-info i {
@@ -683,7 +676,6 @@ contact-info:hover.contact-info i {
     padding-inline: 20px;
     margin-bottom: 10px;
     outline: none;
-
 }
 
 textarea {
@@ -716,7 +708,6 @@ textarea {
     margin-left: 10px;
 }
 
-
 /*---------FOOTER BOX--------*/
 footer {
     display: flex;
@@ -746,20 +737,17 @@ footer {
     color: #8749f2;
 }
 
-
 .footer-social-icons {
     display: flex;
     gap: 30px;
     color: var(--color-white);
 }
 
-
 .bottom-footer {
     font-size: 14px;
     margin-top: 10px;
     color: var(--color-white);
 }
-
 
 /*--------media query = 1024px----*/
 @media only screen and (max-width: 1024px) {
@@ -871,7 +859,6 @@ footer {
         margin-left: 60%;
     }
 }
-
 
 @media only screen and (max-width: 540px) {
     .featured-name {

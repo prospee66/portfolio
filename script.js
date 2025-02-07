@@ -1,4 +1,4 @@
-/*----- Menu Toggle Function -----*/
+/----- Menu Toggle Function -----/
 function myMenufunction() {
     var menuBtn = document.getElementById("myNavmenu");
     if (menuBtn.className === "nav-menu") {
@@ -8,7 +8,7 @@ function myMenufunction() {
     }
 }
 
-/*----- Dark Mode Toggle -----*/
+/----- Dark Mode Toggle -----/
 const body = document.querySelector("body"),
     toggleSwitch = document.getElementById("toggle-switch");
 
@@ -16,7 +16,7 @@ toggleSwitch.addEventListener("click", () => {
     body.classList.toggle("dark");
 });
 
-/*----- Typing Effect -----*/
+/----- Typing Effect -----/
 var typingEffect = new Typed(".typedText", {
     strings: ["Designer", "Coder", "Developer"], 
     loop: true,
@@ -25,7 +25,7 @@ var typingEffect = new Typed(".typedText", {
     backDelay: 2000,
 });
 
-/*---- Scroll Animation ----*/
+/---- Scroll Animation ----/
 const sr = ScrollReveal({
     origin: "top",
     distance: "80px",
@@ -41,6 +41,7 @@ sr.reveal(".featured-image", { delay: 320 });
 
 sr.reveal(".project-box", { interval: 200 });
 sr.reveal(".top-header", {}); 
+
 const srleft = ScrollReveal({
     origin: "left",
     distance: "80px",
@@ -61,7 +62,7 @@ const srRight = ScrollReveal({
 srRight.reveal(".skill", { delay: 100 });
 srRight.reveal(".skill-box", { delay: 100 });
 
-/*----- Active Link on Scroll ----*/
+/----- Active Link on Scroll ----/
 const sections = document.querySelectorAll(".section[id]");
 
 function scrollActive() {
