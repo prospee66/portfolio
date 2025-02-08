@@ -215,9 +215,8 @@ body.dark #moon {
 
 .text-btn {
     display: flex;
-    border-radius: 8px;
-    cursor: pointer;
-    gap: 20px;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
 .text-btn .btn {
@@ -233,9 +232,13 @@ body.dark #moon {
     cursor: pointer;
     border-radius: 8px;
     background: #8749f2;
+    color: #fff;
     font-weight: 500;
     transition: all 0.5s ease;
+    text-align: center; /* Center text inside buttons */
+    flex: 1; /* Allow buttons to grow and fill space */
 }
+
 
 .btn i {
     margin-right: 10px;
@@ -851,5 +854,18 @@ footer {
     }
     .mode {
         margin-left: 50%;
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .text-btn {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduce gap between buttons */
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+        padding: 12px 20px; /* Slightly larger padding for better touch targets */
     }
 }
