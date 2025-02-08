@@ -170,6 +170,8 @@ body.dark #moon {
     display: flex;
     height: 100vh;
     min-height: 700px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /* Featured Text */
@@ -177,11 +179,11 @@ body.dark #moon {
     position: relative;
     display: flex;
     justify-content: center;
-    min-height: 100vh;
     flex-direction: column;
     width: 50%;
     padding-left: 20px;
     margin-top: 10%;
+    z-index: 2; /* Ensure text and buttons are above the image */
 }
 
 .featured-text .hello {
@@ -303,15 +305,18 @@ i {
 
 /* Featured Image */
 .featured-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    width: 100%;
+    z-index: 1; /* Place the image behind the text and buttons */
 }
 
 .image {
-    margin-top: 10%;
     width: 500px;
     height: 700px;
     border-radius: 40% 40% 40% 40%;
@@ -320,8 +325,8 @@ i {
 }
 
 .image img {
-    width: 500px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -786,64 +791,24 @@ footer {
     }
 
     .featured-image {
-        display: flex;
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
+        position: relative; /* Reset positioning for mobile */
         width: 100%; /* Full width */
-        margin-top: 20px; /* Adjust spacing as needed */
+        margin-top: 20px; /* Adjust spacing */
     }
-    
+
     .image {
-        width: 300px; /* Default size for larger screens */
-        height: 400px; /* Default size for larger screens */
-        border-radius: 40% 40% 40% 40%; /* Rounded corners */
-        overflow: hidden; /* Ensure the image stays within the container */
-        animation: imgFloat 5s ease-in-out infinite; /* Optional: Add animation */
-    }
-    
-    .image img {
-        width: 100%; /* Ensure the image fills the container */
-        height: 100%; /* Ensure the image fills the container */
-        object-fit: cover; /* Maintain aspect ratio */
-    }
-    
-    /* Animation for the profile image */
-    @keyframes imgFloat {
-        50% {
-            transform: translateY(20px); /* Adjust as needed */
-        }
+        width: 200px; /* Smaller size for mobile */
+        height: 250px; /* Smaller size for mobile */
     }
 
-    .row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
+    .text-btn {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Reduce gap between buttons */
     }
 
-    .col {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .about-info,
-    .contact-info {
-        width: 100%;
-    }
-
-    .project-container {
-        justify-content: center;
-    }
-
-    .project-box {
-        width: 80%;
-    }
-
-    .mode {
-        display: flex;
-        align-items: center;
-        margin-left: 60%;
+    .btn {
+        width: 100%; /* Full width buttons on mobile */
+        padding: 12px 20px; /* Slightly larger padding for better touch targets */
     }
 }
 
