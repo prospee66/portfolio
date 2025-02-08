@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600');
 
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,37 +11,32 @@
 }
 
 :root {
-    --body-color: rgba(250,250,250);
-    --color-white: rgba(250,250,250);
-    --text-color: rgba(37,37,37);
-    --first-color: rgba(110,87,224);
-    --first-shadow: rgba(0,0,0,0.1);
-
+    --body-color: rgba(250, 250, 250);
+    --color-white: rgba(250, 250, 250);
+    --text-color: rgba(37, 37, 37);
+    --first-color: rgba(110, 87, 224);
+    --first-shadow: rgba(0, 0, 0, 0.1);
     --box-color: #fff;
     --nav-color: #fff;
     --nav-icon: #000;
     --logo-color: #000;
-
     --text-color: #444444;
     --color-white: #242526;
-
     --icon-color: #242526;
     --mode-color: #ccc;
 }
 
-body{
+body {
     background: var(--body-color);
 }
 
-/*-------DARK MODE-------*/
+/* Dark Mode */
 body.dark {
     --body-color: #202425;
     --box-color: #242526;
-
     --nav-color: #262425;
     --color-white: #fff;
     --text-color: #fff;
-
     --nav-icon: #fff;
     --logo-color: #fff;
     --icon-color: #8749f2;
@@ -56,17 +52,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/*------nav bar----*/
-
+/* Navbar */
 nav {
     position: fixed;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 90px;
-    line-height: 90px; 
+    line-height: 90px;
     background: var(--nav-color);
-    padding-inline: 10vw; 
+    padding-inline: 10vw;
     transition: 0.3s;
     z-index: 100;
 }
@@ -75,20 +70,18 @@ nav {
     position: relative;
 }
 
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
 .nav-name {
     font-size: 30px;
     font-weight: 600;
     color: var(--logo-color);
 }
-
-.logo {
-    width: 70px; 
-    height: 70px; 
-    border-radius: 50%; 
-    object-fit: cover; 
-}
-
-
 
 .nav-menu,
 .nav-menu-list {
@@ -136,14 +129,7 @@ nav {
     background: var(--first-color);
 }
 
-
-/*----node----*/
-.node {
-    display: flex;
-    align-items: center;
-    margin-right: -2px;
-}
-
+/* Dark Mode Toggle */
 .moon-sun {
     position: relative;
     display: flex;
@@ -156,9 +142,9 @@ nav {
     background: var(--mode-color);
 }
 
-.moon-sun :is(#moon,#sun) {
+.moon-sun :is(#moon, #sun) {
     position: absolute;
-    transition: 0.5s ease-in-out; 
+    transition: 0.5s ease-in-out;
 }
 
 #sun {
@@ -173,23 +159,20 @@ body.dark #moon {
     opacity: 0;
 }
 
-
-/*-----wrapper----*/
-
+/* Wrapper */
 .wrapper {
     padding-inline: 10vw;
 }
 
-
-/*------featured box-----*/
+/* Featured Box */
 .featured-box {
     position: relative;
     display: flex;
     height: 100vh;
     min-height: 700px;
-} 
+}
 
-/*-----featured text----*/
+/* Featured Text */
 .featured-text {
     position: relative;
     display: flex;
@@ -200,7 +183,6 @@ body.dark #moon {
     padding-left: 20px;
     margin-top: 10%;
 }
-
 
 .featured-text .hello {
     font-size: 50px;
@@ -219,11 +201,10 @@ body.dark #moon {
 
 .typedText {
     font-family: sans-serif;
-color: #8749f2;
-font-size: 40px; 
-font-weight: 600;
-text-transform: capitalize;
-
+    color: #8749f2;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: capitalize;
 }
 
 .text-info {
@@ -239,11 +220,10 @@ text-transform: capitalize;
     gap: 20px;
 }
 
-
 .text-btn .btn {
     border: none;
     color: #f4f4f4;
-    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -265,15 +245,20 @@ i {
     font-size: 16px;
 }
 
-
-/*-----social icon-----*/
+/* Social Icons */
 .social_icons {
+    position: relative; 
     display: flex;
     margin-top: 30px;
     margin-left: 5px;
     gap: 32px;
 }
 
+.social_icons .icon:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 2px 8px 4px #8749f2;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .social_icons .icon {
     display: flex;
@@ -287,16 +272,14 @@ i {
     cursor: pointer;
 }
 
-
 .icon_circle {
     position: absolute;
-    transform: transform(-50%, -50%);
+    transform: translate(-50%, -50%); 
     width: 40px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 50%; 
     animation: iconSlide 4s infinite alternate;
 }
-
 
 @keyframes iconSlide {
     25% {
@@ -317,14 +300,12 @@ i {
     }
 }
 
-
 .social_icons:hover .icon_circle {
     animation-play-state: paused;
     cursor: pointer;
 }
 
-/*-----featured image----*/
-/*-----featured image----*/
+/* Featured Image */
 .featured-image {
     display: flex;
     justify-content: right;
@@ -332,7 +313,6 @@ i {
     min-height: 80vh;
     width: 100%;
 }
-
 
 .image {
     margin-top: 10%;
@@ -343,14 +323,11 @@ i {
     animation: imgfloat 5s ease-in-out infinite;
 }
 
-
 .image img {
     width: 500px;
     height: 700px;
     object-fit: cover;
-
 }
-
 
 @keyframes imgFloat {
     50% {
@@ -358,10 +335,9 @@ i {
     }
 }
 
-
-/*-----main----*/
+/* Main */
 .section {
-   padding-block: 5em;
+    padding-block: 5em;
 }
 
 .row {
@@ -376,7 +352,6 @@ i {
     width: 50%;
 }
 
-
 .top-header {
     text-align: center;
     margin-bottom: 5em;
@@ -388,7 +363,7 @@ i {
     margin-bottom: 10px;
 }
 
-/*------about-info----*/
+/* About Info */
 .about-info {
     position: relative;
     display: flex;
@@ -402,7 +377,6 @@ i {
     border-radius: 20px;
 }
 
-
 .about-me * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -410,13 +384,11 @@ i {
     transition: all 0.25s ease;
 }
 
-
-.about-info figcaption{
+.about-info figcaption {
     width: 100%;
     padding: 25px;
     position: relative;
 }
-
 
 .about-me .profile {
     border-radius: 50%;
@@ -426,8 +398,9 @@ i {
     z-index: 1;
     background-color: #fff;
     max-width: 90px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
+
 .about-me h2 {
     color: var(--text-color);
 }
@@ -451,7 +424,7 @@ i {
     transition: all 0.5s ease;
 }
 
-/*------skill box-----*/
+/* Skill Box */
 .skill {
     position: relative;
     max-width: 600px;
@@ -476,12 +449,12 @@ i {
 
 .skill-box .skill-bar {
     height: 8px;
-    width: 80%; 
+    width: 80%;
     border-radius: 6px;
     margin-top: 6px;
     background: rgba(0, 0, 0, 0.1);
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skill-box .skill-per {
@@ -495,23 +468,27 @@ i {
     opacity: 0;
 }
 
-.skill-per.html{
+.skill-per.html {
     animation-name: 0.1s;
     width: 80%;
 }
-.skill-per.css{
+
+.skill-per.css {
     animation-name: 0.1s;
     width: 80%;
 }
-.skill-per.python{
+
+.skill-per.python {
     animation-name: 0.1s;
     width: 70%;
 }
-.skill-per.javascript{
+
+.skill-per.javascript {
     animation-name: 0.1s;
     width: 40%;
 }
-.skill-per.php{
+
+.skill-per.php {
     animation-name: 0.1s;
     width: 30%;
 }
@@ -538,7 +515,7 @@ i {
     z-index: 1;
 }
 
-/*-----project box-----*/
+/* Project Box */
 .project-container {
     display: flex;
     width: 100%;
@@ -601,7 +578,7 @@ i {
     color: var(--text-color);
 }
 
-/*------contact box-------*/
+/* Contact Box */
 .contact-info {
     position: relative;
     display: flex;
@@ -643,7 +620,7 @@ contact-info:hover.contact-info i {
     z-index: 2;
 }
 
-/*---------contact form--------*/
+/* Contact Form */
 .form-control {
     display: flex;
     flex-direction: column;
@@ -708,7 +685,7 @@ textarea {
     margin-left: 10px;
 }
 
-/*---------FOOTER BOX--------*/
+/* Footer Box */
 footer {
     display: flex;
     justify-content: center;
@@ -749,7 +726,7 @@ footer {
     color: var(--color-white);
 }
 
-/*--------media query = 1024px----*/
+/* Media Queries */
 @media only screen and (max-width: 1024px) {
     .featured-text {
         padding: 0;
@@ -761,7 +738,6 @@ footer {
     }
 }
 
-/*-------media query = 900px----*/
 @media only screen and (max-width: 900px) {
     .nav-menu-btn {
         display: none;
@@ -769,14 +745,14 @@ footer {
     .nav-menu.responsive {
         left: 0;
     }
-    .nav-menu{
+    .nav-menu {
         position: fixed;
         top: 0;
         left: -100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: rgba(250,250,250, 0.7);
+        background: rgba(250, 250, 250, 0.7);
         backdrop-filter: blur(5px);
         width: 300px;
         border-radius: 0px 30px 0px 30px;
