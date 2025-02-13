@@ -4,34 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Navbar -->
         <nav id="header">
             <div class="nav-logo">
                 <p class="nav-name"><img src="logo.jpg" alt="Logo" class="logo"></p>
             </div>
             <div class="nav-menu" id="myNavmenu">
                 <ul class="nav-menu-list">
-                    <li class="nav-list">
-                        <a href="#" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav-list">
-                        <a href="#" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav-list">
-                        <a href="#" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav-list">
-                        <a href="#" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
+                    <li class="nav-list"><a href="#home" class="nav-link active-link">Home</a></li>
+                    <li class="nav-list"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-list"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </div>
             <div class="mode">
@@ -45,11 +34,13 @@
             </div>
         </nav>
 
+        <!-- Main Content -->
         <main class="wrapper">
+            <!-- Home Section -->
             <section class="featured-box" id="home">
                 <div class="featured-text">
                     <div class="hello">
-                        <p>Hello I'm</p>
+                        <p>Hello, I'm</p>
                     </div>
                     <div class="featured-name">
                         <span class="typedText"></span>
@@ -63,30 +54,12 @@
                     </div>
                     <!-- Social Icons -->
                     <div class="social_icons">
-                        <div class="icon_circle"></div>
-                        <div class="icon">
-                            <a href="https://www.instagram.com/prospee10" target="_blank" aria-label="Instagram">
-                                <i class="uil uil-instagram"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.linkedin.com/in/prosper-oppong" target="_blank" aria-label="LinkedIn">
-                                <i class="uil uil-linkedin"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://www.facebook.com/share/15zueGvvs3/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
-                                <i class="uil uil-facebook"></i>
-                            </a>
-                        </div>
-                        <div class="icon">
-                            <a href="https://github.com/prospee66" target="_blank" aria-label="GitHub">
-                                <i class="uil uil-github"></i>
-                            </a>
-                        </div>
+                        <a href="https://www.instagram.com/prospee10" target="_blank" aria-label="Instagram"><i class="uil uil-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/prosper-oppong" target="_blank" aria-label="LinkedIn"><i class="uil uil-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/15zueGvvs3/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="uil uil-facebook"></i></a>
+                        <a href="https://github.com/prospee66" target="_blank" aria-label="GitHub"><i class="uil uil-github"></i></a>
                     </div>
                 </div>
-                        
                 <div class="featured-image">
                     <div class="image">
                         <img src="prospeee.jpg" alt="Prosper's Photo">
@@ -94,6 +67,7 @@
                 </div>
             </section>
 
+            <!-- About Section -->
             <section class="section" id="about">
                 <div class="top-header">
                     <h1>About Me</h1>
@@ -114,48 +88,29 @@
                     <div class="skill">
                         <div class="skill-box">
                             <span class="title">HTML</span>
-                            <div class="skill-bar html">
-                                <span class="skill-per">
-                                    <span class="tooltip">80%</span>
-                                </span>
-                            </div>
+                            <div class="skill-bar html"><span class="skill-per" data-percent="80%"></span></div>
                         </div>
                         <div class="skill-box">
                             <span class="title">CSS</span>
-                            <div class="skill-bar css">
-                                <span class="skill-per">
-                                    <span class="tooltip">80%</span>
-                                </span>
-                            </div>
+                            <div class="skill-bar css"><span class="skill-per" data-percent="80%"></span></div>
                         </div>
                         <div class="skill-box">
                             <span class="title">Python</span>
-                            <div class="skill-bar">
-                                <span class="skill-per python">
-                                    <span class="tooltip">70%</span>
-                                </span>
-                            </div>
+                            <div class="skill-bar python"><span class="skill-per" data-percent="70%"></span></div>
                         </div>
                         <div class="skill-box">
                             <span class="title">JavaScript</span>
-                            <div class="skill-bar">
-                                <span class="skill-per javascript">
-                                    <span class="tooltip">50%</span>
-                                </span>
-                            </div>
+                            <div class="skill-bar javascript"><span class="skill-per" data-percent="50%"></span></div>
                         </div>
                         <div class="skill-box">
                             <span class="title">PHP</span>
-                            <div class="skill-bar">
-                                <span class="skill-per php">
-                                    <span class="tooltip">30%</span>
-                                </span>
-                            </div>
+                            <div class="skill-bar php"><span class="skill-per" data-percent="30%"></span></div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            <!-- Projects Section -->
             <section class="section" id="projects">
                 <div class="top-header">
                     <h1>Projects</h1>
@@ -168,7 +123,7 @@
                     </div>
                     <div class="project-box">
                         <i class="uil uil-users-alt"></i>
-                        <h3>Client</h3>
+                        <h3>Clients</h3>
                         <label>50+ Happy Clients</label>
                     </div>
                     <div class="project-box">
@@ -179,6 +134,7 @@
                 </div>
             </section>
 
+            <!-- Contact Section -->
             <section class="section" id="contact">
                 <div class="top-header">
                     <h1>Let's Work Together</h1>
@@ -196,7 +152,7 @@
                         <div class="form-control">
                             <div class="form-input">
                                 <input type="text" class="input-field" placeholder="Your Name">
-                                <input type="text" class="input-field" placeholder="Your Email">
+                                <input type="email" class="input-field" placeholder="Your Email">
                             </div>
                             <div class="text-area">
                                 <input type="text" class="input-subject" placeholder="Subject">
@@ -211,34 +167,28 @@
             </section>
         </main>
 
+        <!-- Footer -->
         <footer>
             <div class="middle-footer">
                 <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-social-icons">
-                <div class="icon"><i class="uil uil-instagram"></i></div>
-                <div class="icon"><i class="fa-brands fa-linkedin-in icon"></i></div>
-                <div class="icon"><i class="uil uil-facebook"></i></div>
-                <div class="icon"><i class="uil uil-github"></i></div>
+                <a href="https://www.instagram.com/prospee10" target="_blank"><i class="uil uil-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/prosper-oppong" target="_blank"><i class="uil uil-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/15zueGvvs3/?mibextid=wwXIfr" target="_blank"><i class="uil uil-facebook"></i></a>
+                <a href="https://github.com/prospee66" target="_blank"><i class="uil uil-github"></i></a>
             </div>
             <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">@prospee</a>. All rights reserved 2025.</p>
+                <p>Copyright &copy; <a href="#home">@prospee</a>. All rights reserved 2025.</p>
             </div>
         </footer>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="script.js"></script>
