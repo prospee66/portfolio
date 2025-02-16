@@ -183,7 +183,7 @@ body.dark #moon {
     width: 50%;
     padding-left: 20px;
     margin-top: 10%;
-    z-index: 2; /* Ensure text and buttons are above the image */
+    z-index: 2; 
 }
 
 .featured-text .hello {
@@ -217,8 +217,8 @@ body.dark #moon {
 
 .text-btn {
     display: flex;
-    gap: 20px; /* Space between buttons */
-    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
 .btn {
@@ -231,8 +231,8 @@ body.dark #moon {
     color: #fff;
     font-weight: 500;
     transition: all 0.5s ease;
-    text-align: center; /* Center text inside buttons */
-    flex: 1; /* Allow buttons to grow and fill space */
+    text-align: center; 
+    flex: 1; 
 }
 
 .btn i {
@@ -313,7 +313,7 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1; /* Place the image behind the text and buttons */
+    z-index: 1; 
 }
 
 .image {
@@ -791,24 +791,24 @@ footer {
     }
 
     .featured-image {
-        position: relative; /* Reset positioning for mobile */
-        width: 100%; /* Full width */
-        margin-top: 20px; /* Adjust spacing */
+        position: relative; 
+        width: 100%; 
+        margin-top: 20px; 
     }
 
     .image {
-        width: 200px; /* Smaller size for mobile */
-        height: 250px; /* Smaller size for mobile */
+        width: 200px; 
+        height: 250px;
     }
 
     .text-btn {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Reduce gap between buttons */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .btn {
-        width: 100%; /* Full width buttons on mobile */
-        padding: 12px 20px; /* Slightly larger padding for better touch targets */
+        width: 100%; 
+        padding: 12px 20px; 
     }
 }
 
@@ -833,12 +833,12 @@ footer {
 /* Responsive adjustments for smaller screens */
 @media only screen and (max-width: 768px) {
     .text-btn {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Reduce gap between buttons */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     .btn {
-        width: 100%; /* Full width buttons on mobile */
-        padding: 12px 20px; /* Slightly larger padding for better touch targets */
+        width: 100%; 
+        padding: 12px 20px; 
     }
 }
